@@ -14,38 +14,13 @@ sudo sed -i '/\[multilib\]/,/Include/ s/^#//' /etc/pacman.conf
 sudo pacman -Sy
 ```
 
-### Yay (AUR Helper) installieren
-```bash
-cd ~
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd ~ && rm -rf yay
-```
-
-### LibreWolf installieren
-```bash
-yay -S librewolf
-```
-
-### Weitere Programme
-```bash
-sudo pacman -S claws-mail keepassxc rofi nano ranger mpv lm_sensors \
-  libreoffice-fresh xcompmgr steam lutris lxappearance
-```
-
-### Gaming-Support (Metapaket)
-```bash
-yay -S arch-gaming-meta
-```
-
 ### Fenstermanager & Tools
 ```bash
 sudo pacman -S xorg-server xorg-xinit xorg-xrandr
 sudo pacman -S libx11 libxft libxinerama
 ```
 
-### DWM, st, slstatus direkt von GitHub bauen
+### DWM, st, slstatus direkt von suckless.org
 ```bash
 cd ~
 git clone https://git.suckless.org/dwm && cd dwm && sudo make clean install
@@ -59,6 +34,30 @@ git clone https://git.suckless.org/slstatus && cd slstatus && sudo make clean in
 ```bash
 yay -S ly
 sudo systemctl enable ly.service
+```
+
+### Yay (AUR Helper) installieren
+```bash
+cd ~
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ~ && rm -rf yay
+```
+
+### LibreWolf installieren
+```bash
+yay -S librewolf
+```
+### Gaming-Support (Metapaket)
+```bash
+yay -S arch-gaming-meta
+```
+
+### Weitere Programme
+```bash
+sudo pacman -S claws-mail keepassxc rofi nano ranger mpv lm_sensors \
+  libreoffice-fresh xcompmgr steam lutris lxappearance
 ```
 
 ### Audio: PipeWire & WirePlumber
@@ -92,11 +91,6 @@ sudo lpadmin -p Brother_Drucker -E -v "ipp://<IP-ADRESSE>/ipp/print" -m everywhe
 #### Druck-Test
 ```bash
 lp -d Brother_Drucker ~/Downloads/test.pdf
-```
-
-### Bash-Prompt anpassen
-```bash
-echo 'export PS1="\[\e[38;5;179m\][\u\[\e[38;5;8m\]@\[\e[38;5;179m\]\h] \[\e[38;5;7m\][\W] \[\033[0m\]"' >> ~/.bashrc
 ```
 
 ### Ranger Farbschema + Cursorzeile hervorheben
