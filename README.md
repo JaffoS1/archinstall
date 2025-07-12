@@ -1,7 +1,4 @@
-# Arch Linux Setup – Befehle zum Kopieren
-
-Diese Anleitung richtet sich an minimalistische Nutzer mit DWM, st, slstatus, PipeWire, Ranger und Gaming-Support. 
-Sie kann direkt in einem GitHub-Repo als `README.md` verwendet werden. Alle Befehle sind kopierbar.
+# Mein Arch Linux Setup
 
 ---
 
@@ -119,6 +116,13 @@ if context.selected:
 // in dwm.c Funktion updatestatus():
 for (m = mons; m; m = m->next)
     drawbar(m);
+```
+
+### Git Push
+```bash
+git add README.md
+git commit -m "README aktualisiert"
+git push
 ```
 
 ---
